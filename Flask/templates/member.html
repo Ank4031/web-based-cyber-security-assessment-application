@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .navbar {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                background-color: #333;
+                padding: 10px 0;
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+
+            .navbar header b a {
+                color: white;
+                text-decoration: none;
+                margin: 0 15px;
+            }
+
+            #member{
+                background-color: grey;
+                font-size: 20px;
+                border-radius: 10px;
+                padding: 10px;
+                display: block;
+                text-align: center;
+                margin: 40px 10px 10px 10px;
+                color: white;
+                font-weight: bold;
+                font-family: monospace;
+                background: linear-gradient(to right,#9AE66E,black);
+            }
+
+            .three_3{
+                padding:10px;
+                margin: 10px;
+            }
+
+            .three_3 img{
+                max-width:320px;
+                float: left;
+                margin: 40px 20px 20px 20px;
+                border: solid 2px black;
+                border-radius: 10px;
+            }
+
+            .three_3 h3{
+                font-size: 35px;
+                color: white;
+                font-family: sans-serif;
+            }
+
+            .three_3 p{
+                font-size:25px;
+                color: white;
+                font-family: sans-serif;
+            }
+
+            body{
+                background: linear-gradient(to right,black,#9AE66E);
+            }
+
+        </style>
+        </head>
+    <body>
+        <div class="navbar">
+            <header>
+                <b><a href="/" title="Go to home page" style="color: white;">HOME</a></b><span> | </span>
+                <b><a href="/login" title="Go to login page" style="color: white;">LOGIN</a></b><span> | </span>
+                <b><a href="/members" style="color: white;">MEMBERS</a></b><span> | </span>
+                <b><a href="/logout" style="color: white;">LOGOUT</a></b>
+            </header>
+        </div>
+        <br>
+        
+        <div>
+            <p id = "member" >Members of the project involved</p>
+        </div>
+
+        <div class = 'three_3'>
+            <img src = "{{ url_for('static', filename = 'c2.jpg')}}">
+            <h3>ANKIT LAMBA CSE Cyber 3rd sem</h3>
+            <p> Enrollment no: 22BECCS06<br>
+                Department: CSE<br>
+                Batch: 2022-26<br>
+                Course: Btech CSE Cyber
+            </p>
+            </div>
+        </body>
+</html>
