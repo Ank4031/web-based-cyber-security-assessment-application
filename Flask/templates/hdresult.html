@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List in Columns</title>
+    <style>
+        body{
+            background-color:black;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height:30px;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .navbar header b a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: monospace;
+        }
+
+        .container {
+            margin: 20px 20px 20px 20px;
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item {
+            width: 30%; /* Adjust this width to change the number of columns */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #9AE66E;
+            box-shadow: 0 0 10px rgba(86, 229, 43, 0.4);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <header>
+            <b><a href="/" title="Go to home page" style="color: white;">HOME</a></b><span> | </span>
+            <b><a href="/login" title="Go to login page" style="color: white;">LOGIN</a></b><span> | </span>
+            <b><a href="/members" style="color: white;">MEMBERS</a></b><span> | </span>
+            <b><a href="/logout" style="color: white;">LOGOUT</a></b>
+        </header>
+    </div>
+
+    <div class="container">
+        {% for item in lis %}
+            <div class="item">{{ item }}</div><br>
+        {% endfor %}
+    </div>
+</body>
+</html>
